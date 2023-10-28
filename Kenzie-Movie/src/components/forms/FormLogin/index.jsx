@@ -2,8 +2,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "./loginSchema";
 import { Input } from "../Input";
+import { useContext } from "react";
+import { userContext } from "../../../providers/userContext"
 
 export const FormLogin = () => {
+
+	const { userLogin } = useContext(userContext);
+
 	const {
 		register,
 		handleSubmit,
@@ -12,8 +17,7 @@ export const FormLogin = () => {
 	} = useForm({ resolver: zodResolver(loginSchema) });
 
 	const submit = (formData) => {
-		console.log(formData);
-		reset();
+		userLogin(formData, reset)
 	};
 
 	return (

@@ -2,8 +2,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../Input";
 import { registerSchema } from "./registerSchema";
+import { useContext } from "react";
+import { userContext } from "../../../providers/userContext";
 
 export const FormRegister = () => {
+
+	const { createUser } = useContext(userContext);
+
 	const {
 		register,
 		handleSubmit,
@@ -12,8 +17,7 @@ export const FormRegister = () => {
 	} = useForm({ resolver: zodResolver(registerSchema) });
 
 	const submit = (formData) => {
-		console.log(formData);
-		reset();
+		createUser(formData, reset);
 	};
 
 	return (
@@ -43,7 +47,7 @@ export const FormRegister = () => {
 					error={errors.confirmPassword}
 					{...register("confirmPassword")}
 				/>
-				
+
 				<button type="submit">Cadastrar-se</button>
 			</form>
 		</div>
