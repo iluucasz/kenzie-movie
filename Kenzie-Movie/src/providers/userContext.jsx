@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { api } from "../services/api";
 
 export const userContext = createContext({});
 
@@ -8,6 +9,7 @@ export const UserProvider = ({ children }) => {
 
     //informações do usuário
     const [user, setUser] = useState(null);
+    console.log(user);
 
     const navigate = useNavigate();
 
