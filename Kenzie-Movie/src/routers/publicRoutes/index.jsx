@@ -1,7 +1,9 @@
+import { useContext } from "react"
 import { Navigate, Outlet } from "react-router-dom"
+import { userContext } from "../../providers/userContext"
 
 export const PublicRoutes = () => {
-    // Pegar o contexto de usuário
+    const { user } = useContext(userContext);
 
-    // return !user ? <Outlet /> : <Navigate to="/" />
+    return !user ? <Outlet /> : <Navigate to="/dashboard" />
 }
