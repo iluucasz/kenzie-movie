@@ -1,12 +1,16 @@
 import { ToastContainer } from "react-toastify";
 import { RouterMain } from "./routers/routerMain";
 import "./styles/index.scss";
+import { DefaultTemplate } from "./components/defaultTemplate";
 
 function App() {
 
   return (
     <>
-      <RouterMain />
+      <DefaultTemplate>
+        <RouterMain />
+      </DefaultTemplate>
+
       <ToastContainer
         position="top-right"
         autoClose={1000}
