@@ -1,10 +1,12 @@
 import { ToastContainer } from "react-toastify";
-
+import { Header } from "./components/header";
+import "./styles/index.scss";
 
 function App() {
 
   return (
     <>
+      <Header />
       <ToastContainer
         position="top-right"
         autoClose={1000}
