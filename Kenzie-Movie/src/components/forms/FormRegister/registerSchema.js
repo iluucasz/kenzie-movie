@@ -19,7 +19,7 @@ export const registerSchema = z
 				/(?=.*?[a-z])/,
 				"É necessário conter pelo menos 1 letra minúscula."
 			)
-            .regex(/(?=.*?[#?!@$%^&*-])/, "É necessário conter pelo menos 1 caractere especial.")
+            .regex(/(?=.*?[#?!@$%^&*-.])/, "É necessário conter pelo menos 1 caractere especial.")
 			.regex(/(?=.*?[0-9])/, "É necessário conter pelo menos 1 número."),			
 		confirmPassword: z
 			.string()
