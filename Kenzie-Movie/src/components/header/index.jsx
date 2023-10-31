@@ -1,18 +1,51 @@
-import style from "./style.module.scss"
+import { useUserContext } from "../../providers/userContext";
+import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-    return (
-        <header className={style.container__header}>
+	const { user, userLogout } = useUserContext();
 
-            <div className={`${style.container__logo} menu-item`}>kenziemovie</div>
+	return (
+		<header className={style.container__header}>
+			<Link to="/">
+				<div className={`${style.container__logo} menu-item`}>
+					kenziemovie
+				</div>
+			</Link>
 
-            <ul>
-                <li>
-                    <h3 className="menu-item">Cadastre-se</h3>
-                    <button className="btn">Entrar</button>
-                </li>
-            </ul>
+			<ul>
+				<li>
+					{user ? (
+						<>
+							<p className={`menu-item ${style.itemMenu}`}>
+								<span>{user.name[0]}</span> {user.name}
+							</p>
 
-        </header>
-    )
-}
+							<Link
+								className={`menu-item ${style.itemMenu}`}
+								onClick={() => userLogout()}
+							>
+								Sair
+							</Link>
+						</>
+					) : (
+						<>
+							<Link
+								to="/register"
+								className={`menu-item ${style.itemMenu}`}
+							>
+								Cadastre-se
+							</Link>
+							<Link
+								to="/login"
+								className={`btn menu-item ${style.itemMenu}`}
+							>
+								Entrar
+							</Link>
+						</>
+					)}
+				</li>
+			</ul>
+		</header>
+	);
+};
