@@ -45,7 +45,7 @@ export const FormLogin = () => {
             <p className="paragraph">Ou</p>
             <Link to="/register" className="link">
               Cadastre-se
-            </Link>{" "}
+            </Link>
           </div>
         </form>
       </div>
