@@ -11,7 +11,7 @@
 }
 
 .container__category {
-    width: 80%;
+    width: 65%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,4 +44,28 @@
 
 .star__icon {
     color: var(--color-yellow);
+}
+
+.container__paragraph {
+    margin-top: 2rem;
+    max-width: 934px;
+}
+
+.container__titleReview {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    width: 170px;
+    height: 54px;
+    border-radius: 255px;
+
+    background-color: var(--color-yellow);
 }
