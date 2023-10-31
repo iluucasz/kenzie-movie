@@ -1,0 +1,34 @@
+.container__defaultTemplate {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 1328px;
+        height: 536px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+.container__category {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.btn__category {
+    width: 114px;
+    height: 43px;
+
+    max-width: 114px;
+    max-height: 43px;
+
+    color: var(--color-gray-2);
+}
+
+.title__category {
+    color: var(--color-white);
+}
