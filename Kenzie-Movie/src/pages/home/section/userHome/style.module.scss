@@ -1,27 +1,17 @@
-.container__defaultTemplate {
-    margin-top: 2rem;
+.container__user {
     width: 100%;
     height: 100%;
-    gap: 3rem;
-
-    display: flex;
-    flex-direction: column;
-
-    img {
-        width: 100%;
-        max-height: 536px;
-        object-fit: cover;
-
-        border-radius: 50px;
-    }
 }
 
 .container__main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: end;
 }
 
 .container__category {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,18 +27,12 @@
     color: var(--color-gray-2);
 }
 
-.title__category {
-    color: var(--color-white);
-}
-
-.container__review {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .category__time {
     color: var(--color-gray-1) !important;
+}
+
+.title__category {
+    color: var(--color-white);
 }
 
 .container__star {
@@ -60,12 +44,4 @@
 
 .star__icon {
     color: var(--color-yellow);
-}
-
-.container__cardList {
-    min-width: 100%;
-    gap: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
