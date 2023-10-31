@@ -4,11 +4,11 @@ export const Header = () => {
     return (
         <header className={style.container__header}>
 
-            <div className={style.container__logo}>kenziemovie</div>
+            <div className={`${style.container__logo} menu-item`}>kenziemovie</div>
 
             <ul>
                 <li>
-                    <h3>Cadastre-se</h3>
+                    <h3 className="menu-item">Cadastre-se</h3>
                     <button className="btn">Entrar</button>
                 </li>
             </ul>
