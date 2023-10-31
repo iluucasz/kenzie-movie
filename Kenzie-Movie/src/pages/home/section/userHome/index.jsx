@@ -35,22 +35,39 @@ export const UserHome = () => {
 
             </div>
 
-            <div>
-                <p>texto de avaliação</p>
-            </div>
+            <div className="container">
 
-            <div>
-                <h3>titulo</h3>
-                <button>
-                    <span>icone</span>
-                    <p>avaliar</p>
-                </button>
-            </div>
+                <div className={style.container__paragraph}>
+                    <p className="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Numquam, animi! Asperiores et ipsam voluptate,
+                        repudiandae harum dignissimos eligendi cumque
+                        iste mollitia repellendus magni at,
+                        voluptatem itaque, modi fuga quo error.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates rem id perferendis placeat? Hic pariatur animi inventore minima aspernatur nam, provident,
+                        tenetur sed voluptas illo, tempore expedita esse ipsa cumque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Dolorem magnam odit veniam similique ducimus facere dicta. Debitis, eveniet? Odit error labore est unde reprehenderit quidem placeat. Repellat ipsa ratione vel!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam optio numquam rerum, facilis dolor, odio repellat alias itaque explicabo animi ullam iure
+                        sapiente ab accusamus, voluptatibus delectus laboriosam minima atque!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in beatae nostrum ab dignissimos omnis magni temporibus inventore at dolore fugiat,
+                        soluta nemo laboriosam non similique asperiores, nesciunt iusto alias.
+                    </p>
+                </div>
 
-            <div>
-                <ul>
-                    {/* LÓGICA DE RENDERIZAR AVALIAÇÕES DO USUÁRIO */}
-                </ul>
+                <div className={style.container__titleReview}>
+                    <h3 className="title1">Avaliações</h3>
+
+                    <button className={`${style.btn__review} menu-item`}>
+                        <MdOutlineStarBorderPurple500 size={30} />
+                        Avaliar
+                    </button>
+                </div>
+
+                <div>
+                    <ul>
+                        {/* LÓGICA DE RENDERIZAR AVALIAÇÕES DO USUÁRIO */}
+                    </ul>
+                </div>
             </div>
         </section>
     )
