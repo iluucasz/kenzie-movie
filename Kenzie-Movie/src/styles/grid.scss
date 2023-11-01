@@ -1,13 +1,16 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .container {
+        font-family: "Inter", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    max-width: 2036px;
-    width: 100%;
-    height: 100%;
-    font-family: "Inter", sans-serif;
-    padding: 0 18%;
+        max-width: 1328px;
+        width: 100%;
+        height: 100%;
 
-    background-color: var(--color-gray-2);
-}
+        padding: clamp(1.6875rem, 5vw, 2.125rem) 0.5rem 2.25rem 0.5rem;
+
+        margin: 0 auto;
+
+        background-color: var(--color-gray-2);
+    }
