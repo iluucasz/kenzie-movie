@@ -1,12 +1,10 @@
-import { DefaultHome } from "./section/defaultHome"
-import { UserHome } from "./section/userHome"
+import { DefaultHome } from "./defaultHome/index";
 
 export const Home = () => {
     return (
         <>
             <main>
-                {/* <DefaultHome /> */}
-                <UserHome />
+                <DefaultHome />
             </main>
         </>
     )
