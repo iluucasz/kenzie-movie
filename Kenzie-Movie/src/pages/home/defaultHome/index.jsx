@@ -30,11 +30,7 @@ export const DefaultHome = () => {
                 <section>
                     <div>
                         <ul className={style.container__cardList}>
-                            <CardList />
-                            <CardList />
-                            <CardList />
-                            <CardList />
-                            <CardList />
+                            {/* MAPA DOS FILMES */}
                         </ul>
                     </div>
                 </section>

@@ -1,4 +1,12 @@
+import { UserHome } from "./userHome";
+
 export const UserPage = () => {
-    return (<>
-    </>)
+
+    return (
+        <>
+            <main>
+                <UserHome />
+            </main>
+        </>
+    )
 }

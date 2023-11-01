@@ -8,9 +8,9 @@ export const userContext = createContext({});
 export const UserProvider = ({ children }) => {
 	//informações do usuário
 	const [user, setUser] = useState(null);
-	console.log(user);
 
 	const navigate = useNavigate();
+	const pathname = window.location.pathname;
 
 	//criar usuário
 	const createUser = async (formData, reset) => {
@@ -32,6 +32,7 @@ export const UserProvider = ({ children }) => {
 			setUser(data.user);
 			toast.success("Usuário logado com Sucesso!");
 			localStorage.setItem("@TOKEN", data.accessToken);
+			localStorage.setItem("@USER", JSON.stringify(data.user))
 			navigate("/dashboard");
 		} catch (error) {
 			toast.error(error.message);
@@ -44,14 +45,11 @@ export const UserProvider = ({ children }) => {
 	useEffect(() => {
 		const autoLogin = async () => {
 			const token = localStorage.getItem("@TOKEN");
+			const userStorage = localStorage.getItem("@USER")
 			try {
 				if (token) {
-					const response = await api.get("/users", {
-						headers: {
-							Authorization: `Bearer ${token}`,
-						},
-					});
-					setUser(response.data);
+					const user = JSON.parse(userStorage);
+					setUser(user);
 					navigate(pathname);
 				}
 			} catch (error) {
