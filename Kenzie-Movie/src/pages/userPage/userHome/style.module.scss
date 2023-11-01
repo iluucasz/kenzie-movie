@@ -1,0 +1,80 @@
+.container__user {
+    width: 100%;
+    height: 100%;
+}
+
+.container__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.container__category {
+    width: 1328px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn__category {
+    width: 114px !important;
+    height: 43px !important;
+
+    max-width: 114px;
+    max-height: 43px;
+
+    color: var(--color-gray-2);
+}
+
+.category__time {
+    color: var(--color-gray-1) !important;
+}
+
+.title__category {
+    color: var(--color-white);
+}
+
+.container__star {
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.star__icon {
+    color: var(--color-yellow);
+}
+
+.container__paragraph {
+    margin-top: 2rem;
+    max-width: 934px;
+}
+
+.container__titleReview {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    width: 170px;
+    height: 54px;
+    border-radius: 255px;
+
+    background-color: var(--color-yellow);
+}
+
+.container__cardReviewList {
+    margin-top: 5rem;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+}

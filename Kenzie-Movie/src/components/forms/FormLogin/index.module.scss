@@ -1,35 +1,60 @@
 .mainContent {
-  width: 100%;
+  
+	height: 865px;
+	display: flex;
+	justify-content: center;
+
+  img{
+    position: absolute;
+
+    filter:brightness(0.2);
+
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 934px;
+    object-fit:cover;
+  }
+
+}
+
+.container__login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 1328px;
+	height: 100%;
 }
 
 .loginFormDiv {
-  width: 659px;
-  height: 572px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 30px;
-  padding: 30px;
-  background-color: var(--color-gray-2);
-  margin-left: 11.59%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 
-  @media (min-width: 319px) and (max-width: 719px) {
-    width: 100%;
-    margin-left: 5px;
-  }
+	width: 659px;
+	height: 572px;
+	padding: 3rem 3rem 0 3rem;
 
-  @media (min-width: 720px) and (max-width: 1023px) {
-    width: 500px;
-  }
+	background-color: var(--color-gray-2);
+
+	@media (min-width: 319px) and (max-width: 719px) {
+		width: 100%;
+		margin-left: 5px;
+	}
+
+	@media (min-width: 720px) and (max-width: 1023px) {
+		width: 500px;
+	}
 }
 
 .loginButtons {
-  width: 100%;
-  height: 130px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+	gap: 15px;
 }

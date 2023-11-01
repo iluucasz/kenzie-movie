@@ -105,4 +105,4 @@ export const ReviewProvider = ({ children }) => {
 	);
 };
 
-export const usereviewContext = () => useContext(ReviewContext);
+export const useReviewContext = () => useContext(ReviewContext);
