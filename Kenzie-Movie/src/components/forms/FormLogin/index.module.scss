@@ -1,20 +1,36 @@
 .mainContent {
-  width: 100%;
-  height: px;
-  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.5) 27%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.1) 84%),
+    url("../../../assets/icon_login.svg");
+
+  display: flex;
+  justify-content: center;
+
+  background-Size: cover;
+  background-attachment: fixed;
+  background-position: 'center';
+}
+
+.container__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 1328px;
+  height: 100%;
 }
 
 .loginFormDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
   width: 659px;
   height: 572px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 30px;
-  padding: 30px;
+  padding: 3rem 3rem 0 3rem;
+
   background-color: var(--color-gray-2);
-  margin-left: 11.59%;
 
   @media (min-width: 319px) and (max-width: 719px) {
     width: 100%;
@@ -27,11 +43,11 @@
 }
 
 .loginButtons {
-  width: 100%;
-  height: 130px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
   gap: 15px;
 }

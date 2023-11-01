@@ -22,10 +22,10 @@ export const FormLogin = () => {
   };
 
   return (
-    <div className={style.mainContent}>
-      <div className={style.loginFormDiv}>
-        <h2 className="title1">Login</h2>
-        <form onSubmit={handleSubmit(submit)}>
+    <div className={`${style.mainContent}`}>
+      <div className={`${style.container__login}`}>
+        <form onSubmit={handleSubmit(submit)} className={`${style.loginFormDiv}`}>
+          <h2 className="title1">Login</h2>
           <Input
             type="email"
             placeholder="E-mail"
@@ -39,7 +39,7 @@ export const FormLogin = () => {
             {...register("password")}
           />
           <div className={style.loginButtons}>
-            <button className="btn" type="submit">
+            <button className="btn menu-item" type="submit">
               Entrar
             </button>
             <p className="paragraph">Ou</p>

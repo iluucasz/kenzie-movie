@@ -11,7 +11,8 @@
 }
 
 .container__category {
-    width: 65%;
+    width: 1328px;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,5 +76,5 @@
     min-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
 }
