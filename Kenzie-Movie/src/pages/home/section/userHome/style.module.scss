@@ -69,3 +69,11 @@
 
     background-color: var(--color-yellow);
 }
+
+.container__cardReviewList {
+    margin-top: 5rem;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

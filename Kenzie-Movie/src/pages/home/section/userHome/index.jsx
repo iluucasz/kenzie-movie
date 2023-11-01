@@ -1,3 +1,4 @@
+import { CardReviewList } from "./cardReviewList";
 import style from "./style.module.scss";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 
@@ -64,8 +65,12 @@ export const UserHome = () => {
                 </div>
 
                 <div>
-                    <ul>
-                        {/* LÓGICA DE RENDERIZAR AVALIAÇÕES DO USUÁRIO */}
+                    <ul className={style.container__cardReviewList}>
+                        <CardReviewList />
+                        <CardReviewList />
+                        <CardReviewList />
+                        <CardReviewList />
+                        <CardReviewList />
                     </ul>
                 </div>
             </div>
