@@ -5,3 +5,7 @@
 @import "./style_forms/input.scss";
 @import "./grid.scss";
 @import "react-toastify/dist/ReactToastify.css";
+
+body {
+    background-color: var(--color-gray-2);
+}

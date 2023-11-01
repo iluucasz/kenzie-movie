@@ -5,8 +5,8 @@ export const Home = () => {
     return (
         <>
             <main>
-                {/* <DefaultHome /> */}
-                <UserHome />
+                <DefaultHome />
+                {/* <UserHome /> */}
             </main>
         </>
     )
