@@ -1,12 +1,12 @@
-import { Footer } from "../footer"
-import { Header } from "../header"
+import { Footer } from "../footer";
+import { Header } from "../header";
 
 export const DefaultTemplate = ({ children }) => {
-    return (
-        <>
-            <Header />
-            {children}
-            <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
+};
