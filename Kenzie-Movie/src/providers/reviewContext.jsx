@@ -6,7 +6,7 @@ export const ReviewContext = createContext({});
 
 export const ReviewProvider = ({ children }) => {
 	const [movies, setMovies] = useState([]);
-	const [reviews, setReviews] = useState([]);
+	const [reviews, setReviews] = useState([])
 
 	const [editingReview, setEditingReview] = useState(null);
 
@@ -20,14 +20,13 @@ export const ReviewProvider = ({ children }) => {
 					.filter((movie) => movie.reviews.length > 0)
 					.map((movie) => movie.reviews);
 				setMovies(data);
-				setReviews(newReviews);
 			} catch (error) {
 				const message = error.response.data.message;
 				toast.error(message);
 			}
 		};
 		getMoviesAndReviews();
-	});
+	}, []);
 
 	const createReview = async (reviewData) => {
 		try {
@@ -59,7 +58,7 @@ export const ReviewProvider = ({ children }) => {
 				if (review.id === editingReview.id) {
 					return data;
 				} else {
-					return tech;
+					return review;
 				}
 			});
 			setReviews(newReviews);
@@ -88,6 +87,16 @@ export const ReviewProvider = ({ children }) => {
 		}
 	};
 
+	const calculateReviewScore = (Id) => {
+		const newReviews = movies.filter((movie) => movie.id === Id).map(review => review.reviews);
+
+		const sumReviews = newReviews[0].reduce((prev, review) => {
+			return prev + review.score;
+		}, 0);
+
+		return sumReviews / newReviews.length;
+	};
+
 	return (
 		<ReviewContext.Provider
 			value={{
@@ -98,6 +107,7 @@ export const ReviewProvider = ({ children }) => {
 				deleteReview,
 				movies,
 				reviews,
+				calculateReviewScore,
 			}}
 		>
 			{children}
