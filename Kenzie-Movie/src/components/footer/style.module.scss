@@ -1,7 +1,9 @@
 footer {  
   width: 100%;
+  height: clamp(9.875rem, 5vw, 11.4375rem);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -12,3 +14,10 @@ footer {
     color: var(--color-white);
   }
 }
+
+hr {
+  height: 1rem;
+  width: 100%;
+  background-color: var(--color-gray-1);
+}
+
