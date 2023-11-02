@@ -63,9 +63,11 @@
 }
 
 .container__cardList {
-    min-width: 100%;
-    gap: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+    min-width: 100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
