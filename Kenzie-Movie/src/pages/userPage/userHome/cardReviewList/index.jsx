@@ -1,7 +1,7 @@
 import style from "./style.module.scss";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 
-export const CardReviewList = () => {
+export const CardReviewList = ({review}) => {
     return (
         <li className={style.container__review}>
 
@@ -13,7 +13,7 @@ export const CardReviewList = () => {
 
                 <div className={style.container__reviewStar}>
                     <span><MdOutlineStarBorderPurple500 size={30} className={style.review__star} /></span>
-                    <span className="title1-mobile-b">5.0</span>
+                    <span className="title1-mobile-b">{review.score}</span>
                 </div>
 
                 <p className={`${style.user__text} paragraph`}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel eligendi,

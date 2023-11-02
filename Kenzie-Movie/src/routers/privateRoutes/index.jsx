@@ -4,7 +4,6 @@ import { userContext } from "../../providers/userContext"
 
 export const PrivateRoutes = () => {
     const { user } = useContext(userContext);
-    console.log(user);
 
     return user ? <Outlet /> : <Navigate to="/" />
 }

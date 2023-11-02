@@ -4,7 +4,7 @@ import style from "./style.module.scss";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 
 export const DefaultHome = () => {
-	const { movies, calculateReviewScore } = useReviewContext();
+	const { movies, calculateReviewScore, setSelectedMovie } = useReviewContext();
 
 	return (
 		<>
@@ -12,7 +12,7 @@ export const DefaultHome = () => {
 				{movies
 					.filter((movie) => movie.id === 1)
 					.map((movie) => (
-						<section key={movie.id}
+						<section key={movie.id} onClick={() => setSelectedMovie(movie)}
 							className={`${style.container__defaultTemplate}`}
 						>
 							<img

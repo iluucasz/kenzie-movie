@@ -6,8 +6,9 @@ export const ReviewContext = createContext({});
 
 export const ReviewProvider = ({ children }) => {
 	const [movies, setMovies] = useState([]);
-	const [reviews, setReviews] = useState([])
+	const [reviews, setReviews] = useState([]);
 
+	const [selectedMovie, setSelectedMovie] = useState(null)
 	const [editingReview, setEditingReview] = useState(null);
 
 	const token = localStorage.getItem("@TOKEN");
@@ -108,6 +109,8 @@ export const ReviewProvider = ({ children }) => {
 				movies,
 				reviews,
 				calculateReviewScore,
+				selectedMovie,
+				setSelectedMovie,
 			}}
 		>
 			{children}

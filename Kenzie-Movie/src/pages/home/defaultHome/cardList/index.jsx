@@ -4,10 +4,10 @@ import { useReviewContext } from "../../../../providers/reviewContext";
 
 export const CardList = ({movie}) => {
 
-    const {calculateReviewScore} = useReviewContext()
+    const {calculateReviewScore, setSelectedMovie} = useReviewContext()
 
     return (
-        <li className={style.container__card}>
+        <li className={style.container__card} onClick={() => setSelectedMovie(movie)}>
             <img src={movie.image} alt="imagem" />
 
             <div className={style.container__main}>
