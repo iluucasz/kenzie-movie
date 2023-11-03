@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useReviewContext } from "../../../providers/reviewContext";
 
-export const FormReview = () => {
+export const EditFormReview = () => {
 
 	const {createReview} = useReviewContext();
 
