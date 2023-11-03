@@ -30,7 +30,7 @@ export const DefaultHome = () => {
 									<p
 										className={`${style.category__time} paragraph`}
 									>
-										{movie.duration}m
+										{movie.duration}
 									</p>
 								</div>
 

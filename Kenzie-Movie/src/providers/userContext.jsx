@@ -33,7 +33,7 @@ export const UserProvider = ({ children }) => {
 			toast.success("Usuário logado com Sucesso!");
 			localStorage.setItem("@TOKEN", data.accessToken);
 			localStorage.setItem("@USER", JSON.stringify(data.user))
-			navigate("/dashboard");
+			navigate("/");
 		} catch (error) {
 			toast.error(error.message);
 		} finally {
