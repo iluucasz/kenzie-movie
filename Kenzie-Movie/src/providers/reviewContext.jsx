@@ -13,6 +13,12 @@ export const ReviewProvider = ({ children }) => {
 
 	const token = localStorage.getItem("@TOKEN");
 
+	console.log (selectedMovie)
+
+		if (selectedMovie){
+			localStorage.setItem("@selectedMovie", JSON.stringify(selectedMovie))
+		}
+
 	useEffect(() => {
 		const getMoviesAndReviews = async () => {
 			try {

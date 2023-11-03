@@ -1,10 +1,12 @@
 import { useReviewContext } from "../../../providers/reviewContext";
+
 import { CardList } from "./cardList";
 import style from "./style.module.scss";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 export const DefaultHome = () => {
-	const { movies, calculateReviewScore, setSelectedMovie } = useReviewContext();
+	const { movies, calculateReviewScore, setSelectedMovie } =
+		useReviewContext();
 
 	return (
 		<>
@@ -12,13 +14,12 @@ export const DefaultHome = () => {
 				{movies
 					.filter((movie) => movie.id === 1)
 					.map((movie) => (
-						<section key={movie.id} onClick={() => setSelectedMovie(movie)}
+						<section
+							key={movie.id}
+							onClick={() => setSelectedMovie(movie)}
 							className={`${style.container__defaultTemplate}`}
 						>
-							<img
-								src={movie.image}
-								alt="imagem de um filme"
-							/>
+							<img src={movie.image} alt="imagem de um filme" />
 
 							<div className={style.container__main}>
 								<div className={style.container__category}>
@@ -41,13 +42,15 @@ export const DefaultHome = () => {
 										{movie.name}
 									</h3>
 									<div className={`${style.container__star}`}>
-										<button>
+										<Link to="/dashboard" onClick={() => setSelectedMovie(movie)}>
 											<MdOutlineStarBorderPurple500
 												size={40}
 												className={style.star__icon}
 											/>
-										</button>
-										<p className="paragraph">{calculateReviewScore(movie.id)}</p>
+										</Link>
+										<p className="paragraph">
+											{calculateReviewScore(movie.id)}
+										</p>
 									</div>
 								</div>
 							</div>
