@@ -13,7 +13,6 @@ export const RouterMain = () => {
         <Routes>
             {/* Rotas publicas */}
             <Route element={<PublicRoutes />}>
-                <Route path="/" element={<Home />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
             </Route>
@@ -24,6 +23,7 @@ export const RouterMain = () => {
             </Route>
 
             {/* Rotas livres */}
+            <Route path="/" element={<Home />} />
             <Route path="*" element={<ErrorPage />} />
 
         </Routes>
