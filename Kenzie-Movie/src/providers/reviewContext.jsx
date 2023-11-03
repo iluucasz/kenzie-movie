@@ -37,6 +37,7 @@ export const ReviewProvider = ({ children }) => {
 				},
 			});
 			setReviews([...reviews, data]);
+			console.log (reviews)
 			toast.success("Filme avaliado com sucesso!");
 		} catch (error) {
 			const message = error.response.data.message;
