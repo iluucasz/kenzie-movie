@@ -11,18 +11,15 @@ export const RouterMain = () => {
     return (
 
         <Routes>
-            {/* Rotas publicas */}
             <Route element={<PublicRoutes />}>
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
             </Route>
 
-            {/* Rotas privadas */}
             <Route element={<PrivateRoutes />}>
                 <Route path="/dashboard" element={<UserPage />} />
             </Route>
 
-            {/* Rotas livres */}
             <Route path="/" element={<Home />} />
             <Route path="*" element={<ErrorPage />} />
 

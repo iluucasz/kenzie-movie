@@ -1,10 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { api } from "../services/api";
+import { userContext } from "./userContext";
 
 export const ReviewContext = createContext({});
 
 export const ReviewProvider = ({ children }) => {
+	const { user } = useContext(userContext);
+
 	const [movies, setMovies] = useState([]);
 	const [reviews, setReviews] = useState([]);
 
@@ -13,11 +16,11 @@ export const ReviewProvider = ({ children }) => {
 
 	const token = localStorage.getItem("@TOKEN");
 
-	console.log (selectedMovie)
-
-		if (selectedMovie){
+	if (selectedMovie) {
+		if (user) {
 			localStorage.setItem("@selectedMovie", JSON.stringify(selectedMovie))
 		}
+	}
 
 	useEffect(() => {
 		const getMoviesAndReviews = async () => {
@@ -43,7 +46,7 @@ export const ReviewProvider = ({ children }) => {
 				},
 			});
 			setReviews([...reviews, data]);
-			console.log (reviews)
+			console.log(reviews)
 			toast.success("Filme avaliado com sucesso!");
 		} catch (error) {
 			const message = error.response.data.message;

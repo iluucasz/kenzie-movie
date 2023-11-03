@@ -6,13 +6,12 @@ import { api } from "../services/api";
 export const userContext = createContext({});
 
 export const UserProvider = ({ children }) => {
-	//informações do usuário
+
 	const [user, setUser] = useState(null);
 
 	const navigate = useNavigate();
 	const pathname = window.location.pathname;
 
-	//criar usuário
 	const createUser = async (formData, reset) => {
 		try {
 			await api.post("/users", formData);
@@ -25,7 +24,6 @@ export const UserProvider = ({ children }) => {
 		}
 	};
 
-	//logar usuário
 	const userLogin = async (formData, reset) => {
 		try {
 			const { data } = await api.post("/login", formData);
@@ -41,7 +39,6 @@ export const UserProvider = ({ children }) => {
 		}
 	};
 
-	//atualizar página de usuário
 	useEffect(() => {
 		const autoLogin = async () => {
 			const token = localStorage.getItem("@TOKEN");
@@ -59,9 +56,11 @@ export const UserProvider = ({ children }) => {
 		autoLogin();
 	}, []);
 
-	//deslogar usuário
 	const userLogout = () => {
 		localStorage.removeItem("@TOKEN");
+		localStorage.removeItem("@selectedMovie");
+		localStorage.removeItem("@token");
+		localStorage.removeItem("@USER");
 		setUser(null);
 		navigate("/");
 	};

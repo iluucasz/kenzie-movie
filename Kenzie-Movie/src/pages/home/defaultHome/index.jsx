@@ -1,12 +1,25 @@
+import { useContext } from "react";
 import { useReviewContext } from "../../../providers/reviewContext";
-
 import { CardList } from "./cardList";
 import style from "./style.module.scss";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { userContext } from "../../../providers/userContext";
+import { toast } from "react-toastify";
 export const DefaultHome = () => {
+
 	const { movies, calculateReviewScore, setSelectedMovie } =
 		useReviewContext();
+
+	const { user } = useContext(userContext);
+
+	const viewCard = () => {
+		if (user) {
+			setSelectedMovie(movie)
+		} else {
+			toast.error("Faça Login para visualizar este filme")
+		}
+	}
 
 	return (
 		<>
@@ -19,7 +32,9 @@ export const DefaultHome = () => {
 							onClick={() => setSelectedMovie(movie)}
 							className={`${style.container__defaultTemplate}`}
 						>
-							<img src={movie.image} alt="imagem de um filme" />
+							<Link to="/dashboard" onClick={() => viewCard()}>
+								<img src={movie.image} alt="imagem de um filme" />
+							</Link>
 
 							<div className={style.container__main}>
 								<div className={style.container__category}>

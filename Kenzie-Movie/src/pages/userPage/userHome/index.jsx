@@ -1,14 +1,10 @@
-import { useReviewContext } from "../../../providers/reviewContext";
 import { CardReviewList } from "./cardReviewList";
-import logo from "../../../assets/imgCard.jpg"
 import style from "./style.module.scss";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 
 export const UserHome = () => {
-	
-	const movie = JSON.parse(localStorage.getItem("@selectedMovie"))
 
-	console.log (movie)
+	const movie = JSON.parse(localStorage.getItem("@selectedMovie"));
 
 	return (
 		<>
@@ -25,7 +21,7 @@ export const UserHome = () => {
 							{movie.type}
 						</span>
 						<p className={`${style.category__time} paragraph`}>
-							{movie.duration}m
+							{movie.duration}
 						</p>
 					</div>
 
