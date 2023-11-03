@@ -1,10 +1,18 @@
 .inputBox {
-    width: 100%;
-    max-width: 465px;
-    height: 70px;
+  width: 100%;
 
-    padding: 2rem;
+  height: 70px;
 
+  padding: 1.4375rem;
+
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 16px;
+
+  color: var(--color-white);
+  background-color: var(--color-gray-1);
+
+  &::placeholder{
     color: var(--color-white);
-    background-color: var(--color-gray-1);
+  }
 }

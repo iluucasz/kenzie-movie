@@ -1,42 +1,46 @@
 .title1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 44px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  color: var(--color-white);
 }
 
 .title1-mobile-a {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
 }
 
 .title1-mobile-b {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 21px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
 }
 
 .title3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
 }
 
 .paragraph {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--color-white);
 }
 
 .menu-item {
-    font-family: "Poppins";
-    font-weight: 700;
-    font-size: 17px;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 17px;
 }
 
 .link {
-    font-family: "Poppins";
-    font-weight: 700;
-    font-size: 17px;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 17px;
 
-    color: var(--color-yellow);
+  color: var(--color-yellow);
 }

@@ -1,0 +1,36 @@
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: clamp(1rem, 5vw, 2.5rem);
+
+  position: relative;
+
+  margin-top: clamp(1rem, 5vw, 1.8125rem);
+
+  div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  button {
+    height: 3.125rem;
+    width: 12.5rem;
+    align-self: flex-end;
+  }
+
+  @media (min-width:720px) {
+    flex-direction: row;
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 190px;
+    }
+  }
+}

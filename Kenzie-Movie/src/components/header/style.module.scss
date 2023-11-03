@@ -1,0 +1,48 @@
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 83rem;
+    height: 2.6875rem;
+
+    padding: clamp(1.6875rem, 5vw, 2.125rem) 0.5rem 2.25rem 0.5rem;
+
+    margin: 0 auto;
+}
+
+.container__logo {
+    color: white;
+}
+
+ul {
+    height: 100%;
+    max-width: 300px;
+
+    li {
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: clamp(0.5rem, 5vw, 2.9375rem);
+
+        a {
+            color: var(--color-white);
+        }
+    }
+
+    .itemMenu {
+        width: 7.125rem;
+        height: clamp(2.3125rem, 5vw, 2.6875rem);
+        display: flex;
+        align-items: center;
+
+        span {
+            background-color: var(--color-yellow);
+            border-radius: 50%;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+        }
+    }
+}

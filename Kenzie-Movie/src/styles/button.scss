@@ -1,23 +1,24 @@
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    max-width: 185px;
-    height: 67px;
+  width: 100%;
 
-    background-color: var(--color-yellow);
-    color: var(--color-gray-2);
-    border-radius: 255px;
+  height: 100%;
+  max-height: 67px;
 
-    &.medium {
-        max-width: 170px;
-        height: 54px;
-    }
+  background-color: var(--color-yellow);
+  color: var(--color-gray-2);
+  border-radius: 255px;
 
-    &.small {
-        max-width: 190px;
-        height: 43px;
-    }
+  &.medium {
+    max-width: 170px;
+    height: 54px;
+  }
+
+  &.small {
+    max-width: 190px;
+    height: 43px;
+  }
 }
