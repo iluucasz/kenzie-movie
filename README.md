@@ -1,6 +1,6 @@
 # kenzie-movie
 
- Um website de visualização de filmes e login/registro de usuário atrás do uso de requisição a API.<br>
+ Um website desenvolvido para a visualização de filmes com funcionalidades de login e registro de usuários, integrado à API por meio de requisições...<br>
 
 <h4>Projeto criado usando o GitFlow com a colaboração dos seguintes membros:</h4>
 
